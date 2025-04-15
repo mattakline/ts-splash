@@ -15,14 +15,22 @@ const robotoMono = Roboto_Mono({
 export default function Home() {
   return (
     <div
-      className={`${montserrat.className} ${robotoMono.className} grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20`}
+      className={`${montserrat.className} ${robotoMono.className} grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 max-w-screen-md mx-auto`}
     >
-      <div className="absolute top-8 left-8">
-        <Image src="/tailstrike-logo.webp" alt="Tailstrike Logo" width={240} height={240} />
+      <div className="absolute top-4 left-4 w-[120px] sm:w-[160px] md:w-[200px]">
+        <Image
+          src="/tailstrike-logo-white.webp"
+          alt="Tailstrike Logo"
+          width={240}
+          height={240}
+          layout="responsive"
+        />
       </div>
       <main className="flex flex-col gap-[16px] row-start-2 items-center sm:items-start text-center sm:text-left">
         <h1 className="text-4xl font-bold" style={{ fontFamily: "Montserrat, sans-serif" }}>
-          Every flight matters. Tailstrike makes it real.
+          Every flight matters.
+          <br />
+          Tailstrike makes it real.
         </h1>
         <h2 className="text-base max-w-xl">
           Tailstrike aims to add a new layer of realism, interactivity, and identity for flight simulation and aviation enthusiasts.
